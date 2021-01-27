@@ -44,7 +44,7 @@ class AppointmentNotification extends Notification
     {
         return (new MailMessage)
                     ->subject('Notification of Appointment Made')
-                    ->greeting('Hello! '.$this->user->name)
+                    ->greeting('Hello! '.$this->user->county)
                     ->line('application made made by '. $this->appointment->individual->name. 'on the date: '.$this->appointment->appointment_date)
                     ->line('Thank you for using our application!');
     }

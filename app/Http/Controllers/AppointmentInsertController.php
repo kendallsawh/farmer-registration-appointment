@@ -61,7 +61,7 @@ class AppointmentInsertController extends Controller
             $appointment->appointment_type = $request->options;
             $appointment->save();
 
-            $users = TestGroup::where('active',1)->get();
+            $users = TestGroup::find($appointment->county_id);
 
             foreach ($users as $user) {
                 
