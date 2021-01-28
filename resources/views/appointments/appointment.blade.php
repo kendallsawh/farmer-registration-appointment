@@ -43,7 +43,21 @@
 
         				</div> -->
         				<hr>
-
+                        <div class="text-center"><strong>Application Type</strong></div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-info">
+                                        <input type="radio" name="options" id="option2" autocomplete="off" value="1"> New
+                                    </label>
+                                    <label class="btn btn-info">
+                                        <input type="radio" name="options" id="option3" autocomplete="off" value="2"> Renewal
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="text-center"><strong>Applicant Information</strong></div>
         				<div class="row">
         					<div class="col-sm-12">
         						<div class="form-group">
@@ -127,6 +141,7 @@
                             </div>
                         </div>
                         <hr>
+                        <div class="text-center"><strong>Applicant Address</strong></div>
                         <div class="row">
                             <div class="col-sm-6">
                                 <div class="form-group">
@@ -203,7 +218,8 @@
         					</div>
         				</div>
         				
-        				
+        				<hr>
+                        <div class="text-center"><strong>Additional Details</strong></div>
         				<div class="row">
         					<div class="col-sm-12">                    
         						<div id="grp-comment" class="form-group{{ $errors->has('comments') ? ' has-error' : '' }}">
@@ -218,19 +234,8 @@
         					</div>
         				</div>
                         <hr>
-                        <div class="row">
-                            <div class="col-sm-12">
-                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                                <label class="btn btn-info">
-                                    <input type="radio" name="options" id="option2" autocomplete="off" value="1"> New
-                                </label>
-                                <label class="btn btn-info">
-                                    <input type="radio" name="options" id="option3" autocomplete="off" value="2"> Renewal
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                        <hr>
+                        <div class="text-center"><strong>Appointment Date Selection</strong></div>
+                        <br>
         				<div class="row">
         					<div class="col-sm-8">
         						<div class="form-group available-dates" id="available-dates">

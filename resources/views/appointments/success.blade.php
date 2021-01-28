@@ -14,8 +14,8 @@
                         </div>
                     @endif
 
-                    {{ __('Success! Your application has been recorded. please check your email for confirmation recipt') }}
-                    <div>
+                    {{ __('Success! Your application has been recorded. Please check your email for confirmation recipt') }}
+                    <div class="text-center">
                         <h3>You will be redirected shortly.</h3>
                     </div>
                 </div>
@@ -29,7 +29,7 @@
     $(function() {
         setTimeout(function() {
             window.location.href = "/";
-      }, 5000);
+      }, 8000);
     });
     
 </script>

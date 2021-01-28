@@ -60,7 +60,7 @@ class NotifiyApplicant extends Notification
                     ->line('1) Two passsport sized photos.')
                     ->line('2) One form of identification; Valid National ID or Passport')
                     ->line('3) Suporting documents(original and copy) on the parcel(s) of land you are registering with.')
-                    ->line('You may also print this email and present it to the registration clerk on the day of the appointment.');
+                    ->line('You may also print this email and present it to the registration clerk on the day of the appointment.')
                     ->line('Note: The County operational hours are from 8am - 3pm daily.');
                     
     }

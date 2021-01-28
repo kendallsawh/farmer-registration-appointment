@@ -61,14 +61,18 @@ class AppointmentInsertController extends Controller
             $appointment->appointment_type = $request->options;
             $appointment->save();
 
-            $users = TestGroup::find($appointment->county_id);
+            $users = County::where('id',$appointment->county_id)
+                            ->whereNotNull('email',)
+                            ->get();
+            if (!$users->isEmpty()) {
+                foreach ($users as $user) {
 
-            foreach ($users as $user) {
-                
-                Notification::send($user, new AppointmentNotification($appointment,$user));
+                    Notification::send($user, new AppointmentNotification($appointment,$user));
+                }
             }
+            
 
-            $county = County::find($appointment->county_id);
+            $county = County::find($appointment->county_id)->first();
             $regtype = $appointment->appointment_type == 1? 'New' : 'Renewal';
             Notification::route('mail', $individual->email)
                             ->notify(
