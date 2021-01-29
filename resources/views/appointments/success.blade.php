@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    {{ __('Success! Your application has been recorded. Please check your email for confirmation recipt') }}
+                    {{ __('Success! Your application has been recorded. Please check your email for confirmation receipt') }}
                     <div class="text-center">
                         <h3>You will be redirected shortly.</h3>
                     </div>

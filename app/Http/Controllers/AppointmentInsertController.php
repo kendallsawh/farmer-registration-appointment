@@ -30,15 +30,15 @@ class AppointmentInsertController extends Controller
             $indi_cont = new IndividualContact;
             $contact = new Contact;
 
-            $individual->f_name = $request->firstname;
-            $individual->l_name =$request->lastname;
+            $individual->f_name = strtoupper($request->firstname);
+            $individual->l_name =strtoupper($request->lastname);
             $individual->gender_slug =$request->gender;
             $individual->email =$request->email;
             $individual->save();
 
             $address->lot_type_id = $request->lot_type;
             $address->house_num = $request->house_no;
-            $address->road = $request->road;
+            $address->road = strtoupper($request->road);
             $address->district_id = $request->district;
             $address->save();
 

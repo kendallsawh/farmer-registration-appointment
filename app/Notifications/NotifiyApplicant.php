@@ -47,7 +47,7 @@ class NotifiyApplicant extends Notification
     public function toMail($notifiable)
     {
         return (new MailMessage)
-                    ->subject('Farmer Registration Booking Sent')
+                    ->subject('Farmer Registration Appointment Notification')
                     ->greeting('Hello, '.$this->name)
                     ->line('Thank you for using our appointment application!')
                     ->line(new HtmlString('Your <strong>'.$this->regtype.'</strong> registration will take place at the following County office on the specified date'))
